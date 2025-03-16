@@ -1,0 +1,71 @@
+/* Фон страницы контактов */
+.contact-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('../../assets/hombre-negocios-pintura-barra-grafico-rodillo-pintura.png') no-repeat center center;
+  background-size: contain; /* Весь рисунок будет виден */
+  background-color: #f8f9fa; /* Цвет фона на случай, если картинка не покрывает весь экран */
+  background-position: 85% center;
+  position: relative;
+  text-align: center;
+  color: #ff9f43;
+}
+
+/* Затемняющий фильтр для фона */
+.contact-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: 1;
+}
+
+/* Контент остается поверх затемнения */
+.contact-section {
+  position: relative;
+  z-index: 2;
+}
+
+/* Стили формы */
+.contact-form {
+  max-width: 600px;
+  width: 90%;
+  background: rgba(252, 234, 206, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Кнопка */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #ff9f43;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #ff9966;
+  transform: translateY(-3px);
+}

@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.service-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 300px;
+}

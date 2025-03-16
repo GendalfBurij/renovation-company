@@ -1,0 +1,255 @@
+/* ======== Основной стиль страницы ======== */
+.services-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+/* ======== Меню ======== */
+.hero-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Обычное меню */
+.menu-links {
+  display: flex;
+  gap: 50px;
+}
+
+/* Бургер-меню */
+.burger-menu {
+  display: none;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+}
+
+/* Меню-бургер */
+.menu-mobile {
+  display: none;
+}
+
+/* ======== Заголовок страницы ======== */
+.services-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff8c00; /* Цвет заголовка */
+  margin-top: 60px; /* Опускаем заголовок */
+  margin-bottom: 10px;
+}
+
+/* ======== Контейнер с карточками ======== */
+.service-list {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto; /* Горизонтальная прокрутка */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  scroll-padding: 0 20px; /* Отступы для snap */
+  scroll-snap-type: x proximity; /* Плавное закрепление */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ======== Карточки ======== */
+.service-card {
+  flex: 0 0 280px; /* Фиксированная ширина карточек */
+  height: 420px; /* Фиксированная высота */
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(255, 165, 0, 0.2);
+  padding: 15px;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: visible;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative; /* Добавляем для позиционирования кнопки */
+}
+
+.card-back {
+  flex-grow: 1; /* Занимает всё доступное пространство */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px; /* Отступ для кнопки */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 165, 0, 0.3);
+}
+
+/* ======== Изображения в карточках ======== */
+.service-icon {
+  width: 100%;
+  height: 130px;
+  object-fit: cover; /* Обрезать изображение по контейнеру */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ======== Заголовок карточки ======== */
+.service-card h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ff7300;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* ======== Описание карточки ======== */
+.service-card p {
+  font-size: 1rem;
+  color: #444;
+  margin: 10px 0;
+  padding: 0 10px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 80px;
+  white-space: normal; /* Разрешить перенос текста */
+  max-height: 120px; /* Увеличить высоту */
+  line-height: 1.4; /* Улучшить читаемость */
+  overflow-y: auto; /* Добавить скролл, если текст слишком длинный */
+  flex-grow: 1; /* Растягиваем текст на доступное пространство */
+}
+
+/* ======== Кнопка "Saber Más" ======== */
+.details-button {
+  background: #ff9f43;
+  border: 2px solid #ff7300;
+  padding: 12px 24px;
+  bottom: 15px;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 30px); /* Ширина кнопки с учётом отступов */
+  margin-top: auto; /* Прижимаем к низу */
+  color: white;
+}
+
+.details-button:hover {
+  background: #ff7300;
+  transform: translateY(-3px);
+}
+
+/* ======== Кнопки прокрутки ======== */
+.carousel-controls {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 1rem 0; /* Поднимаем кнопки выше */
+  position: relative;
+}
+
+.carousel-controls button {
+  background: #ff9f43;
+  border: 2px solid #ff7300;
+  padding: 12px 24px;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.carousel-controls button:hover {
+  background: #ff7300;
+  transform: translateY(-3px);
+}
+
+/* ======== Адаптация для мобильных ======== */
+@media (max-width: 768px) {
+  .hero-menu {
+    width: 100%;
+    left: 0;
+    transform: none;
+    padding: 15px;
+    justify-content: space-between;
+  }
+
+  .menu-links {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block !important;
+    z-index: 1001;
+  }
+
+  .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .menu-mobile a {
+    color: white !important;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 15px !important;
+    display: block;
+  }
+
+  .menu-mobile a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Заголовок */
+  .services-title {
+    font-size: 2rem;
+    margin-top: 100px;
+  }
+
+  /* Горизонтальная прокрутка карточек */
+  .service-list::-webkit-scrollbar {
+    display: none; /* Скрыть скроллбар */
+  }
+  /* Карточки */
+  .service-card {
+    scroll-snap-align: start; /* Начало карточки привязывается к краю контейнера */
+    box-sizing: border-box;
+  }
+
+  .service-icon {
+    height: 110px;
+  }
+
+  /* Кнопки прокрутки */
+  .carousel-controls {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .carousel-controls button {
+    padding: 10px 20px;
+  }
+}

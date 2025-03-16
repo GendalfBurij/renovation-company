@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  frontend:
+    build: ./frontend # Использует Dockerfile из папки frontend
+    ports:
+      - "3000:3000" # Пробрасывает порт 3000 на хост
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+
+  backend:
+    build: ./backend # Использует Dockerfile из папки backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/mydb
+    depends_on:
+      - db # Бэкенд запустится только после запуска БД
+
+  db:
+    image: postgres:13 # Готовый образ из Docker Hub
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=mydb
+
+volumes:
+  postgres_data:

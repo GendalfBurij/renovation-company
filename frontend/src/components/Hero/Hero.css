@@ -1,0 +1,227 @@
+.hero-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: rgb(252, 196, 121);
+    position: relative;
+    padding: 50px;
+}
+
+/* Контейнер для изображения и контента */
+.hero-container {
+    display: flex;
+    flex-direction: row; /* Располагаем элементы в строку */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+
+/* Меню */
+.hero-menu {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    border-radius: 12px;
+}
+
+/* Бургер-меню (изначально скрыто) */
+.burger-menu {
+    display: none; /* Показывать только на мобильных */
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Меню-бургер (по умолчанию скрыто) */
+.menu-mobile {
+    display: none;
+    
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(255, 98, 0);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 50px;
+}
+
+.menu-links a {
+    color: rgb(255, 98, 0);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    opacity: 0.7;
+}
+
+/* Контейнер с заголовком и текстом */
+.hero-content {
+    flex: 1; /* Занимает 50% */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выравниваем текст слева */
+    text-align: left;
+    padding-right: 80px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 250;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+/* Стили для изображения */
+.hero-image {
+    width: 400px; /* Увеличиваем изображение */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Блок с изображением */
+.hero-image-container {
+    flex: 1; /* Занимает 50% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Кнопка "Nuestros Servicios" */
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #ff9f43;
+    border: 2px solid #ff9966;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #fd8142;
+    transform: translateY(-3px);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .hero-menu {
+        width: 100%;
+        left: 0;
+        transform: none;
+        padding: 15px;
+        justify-content: space-between; /* Выравниваем логотип и бургер-меню */
+        color: rgb(255, 98, 0);
+    }
+
+    .logo {
+        margin-left: 15px; /* Добавляем отступ, чтобы логотип не сливался с краем */
+    }
+
+    .menu-links {
+        display: none; /* Скрываем обычное меню */
+    }
+
+    .burger-menu {
+        display: block; /* Показываем бургер-меню */
+        margin-right: 15px; /* Двигаем бургер вправо */
+        color: rgb(255, 98, 0);
+    }
+
+    .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .menu-mobile a {
+        color: rgb(253, 253, 253);
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 10px;
+        display: block;
+    }
+
+    .menu-mobile a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-container {
+        flex-direction: column; /* Контент и изображение друг под другом */
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 20px; /* Уменьшаем отступы */
+    }
+
+    .hero-image-container {
+        order: -1; /* Двигаем изображение выше текста */
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 220px; /* Делаем изображение меньше */
+        margin-top: 40px; /* Уменьшаем отступ сверху */
+    }
+
+    .hero-content {
+        padding: 0 20px; /* Добавляем отступы по бокам */
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Уменьшаем заголовок */
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Уменьшаем текст */
+        max-width: 100%;
+    }
+
+    .hero-button {
+        padding: 10px 20px; /* Делаем кнопку меньше */
+        font-size: 1rem;
+    }
+}

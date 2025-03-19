@@ -10,7 +10,7 @@ const HomePage = () => {
       .then(response => response.json())
       .then(data => setApiMessage(data.message))
       .catch(error => console.error('Error:', error));
-  }, []);
+  }, [setApiMessage]);
 
   return (
     <>

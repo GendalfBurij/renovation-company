@@ -3,7 +3,7 @@ name: Deploy React App
 on:
   push:
     branches:
-      - main  # Запускаем CI/CD при пуше в main
+      - main
 
 jobs:
   build-and-deploy:
@@ -17,15 +17,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
+      
       - name: Install dependencies
         run: npm install
+        working-directory: ./frontend  # 👈 Добавляем путь к фронтенду, если package.json внутри frontend
 
       - name: Build project
         run: npm run build
+        working-directory: ./frontend  # 👈 Используем тот же путь
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./frontend/build  # 👈 Указываем правильный путь к собранному проекту

@@ -1,0 +1,99 @@
+.reviews-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f8f9fa;
+    padding: 2rem;
+  }
+  
+  .carousel-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 100%;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .carousel img {
+    width: 65%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-control button {
+    background-color: #ff7300;
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5em;
+    transition: background 0.3s;
+  }
+  
+  .carousel-control button:hover {
+    background-color: #ff5500;
+  }
+  
+  .text-content {
+    width: 35%;
+    text-align: left;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .text-content h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .text-content p {
+    font-size: 1.1em;
+  }
+  
+  /* Адаптация для мобильных */
+  @media (max-width: 768px) {
+    .carousel-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .carousel, .text-content {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .carousel-control {
+      top: 100%;
+    }
+  }
+  

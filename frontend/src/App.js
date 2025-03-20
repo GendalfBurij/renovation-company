@@ -4,7 +4,9 @@ import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import PortfolioPage from './pages/PortfolioPage';
+import ReviewsPage from './pages/ReviewsPage';
 import './components/ServiceCard/ServiceCard.css';
+
 
 const RouterComponent = process.env.REACT_APP_ENV === 'production' ? BrowserRouter : HashRouter;
 
@@ -15,7 +17,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/servicios" element={<ServicesPage />} />
         <Route path="/contacto" element={<ContactPage />} />
-        <Route path="/resenyas" element={<PortfolioPage />} />
+        <Route path="/resenyas" element={<ReviewsPage />} />
       </Routes>
     </RouterComponent>
   );

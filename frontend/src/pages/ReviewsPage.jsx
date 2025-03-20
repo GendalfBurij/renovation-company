@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ReviewsPage.css';
+import '.src/components/Reviews/ReviewsPage.css';
 
 const reviews = [
   { id: 1, image: '/assets/colorful-flower-garden.jpg', alt: 'Отзыв 1' },

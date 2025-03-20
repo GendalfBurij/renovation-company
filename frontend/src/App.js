@@ -3,7 +3,7 @@ import { HashRouter, BrowserRouter, Routes, Route } from 'react-router-dom'; //B
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
-import PortfolioPage from './pages/PortfolioPage';
+// import PortfolioPage from './pages/PortfolioPage';
 import ReviewsPage from './pages/ReviewsPage';
 import './components/ServiceCard/ServiceCard.css';
 

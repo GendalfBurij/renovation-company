@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/renovation-company/static/css/main.9ed9950b.css",
-    "main.js": "/renovation-company/static/js/main.485f8291.js",
+    "main.css": "/renovation-company/static/css/main.717b8a35.css",
+    "main.js": "/renovation-company/static/js/main.6c694968.js",
     "static/js/453.8ab44547.chunk.js": "/renovation-company/static/js/453.8ab44547.chunk.js",
     "static/media/full-shot-men-high-five-office.jpg": "/renovation-company/static/media/full-shot-men-high-five-office.d8d68205443edf843323.jpg",
     "static/media/tiler-working-renovation-apartment.jpg": "/renovation-company/static/media/tiler-working-renovation-apartment.54017ee0e2fd0d138bb6.jpg",
@@ -11,12 +11,12 @@
     "static/media/icono-3d-campo-construccion.png": "/renovation-company/static/media/icono-3d-campo-construccion.753652a681e423401fad.png",
     "static/media/hombre-negocios-pintura-barra-grafico-rodillo-pintura.png": "/renovation-company/static/media/hombre-negocios-pintura-barra-grafico-rodillo-pintura.4188430974359b0ede0a.png",
     "index.html": "/renovation-company/index.html",
-    "main.9ed9950b.css.map": "/renovation-company/static/css/main.9ed9950b.css.map",
-    "main.485f8291.js.map": "/renovation-company/static/js/main.485f8291.js.map",
+    "main.717b8a35.css.map": "/renovation-company/static/css/main.717b8a35.css.map",
+    "main.6c694968.js.map": "/renovation-company/static/js/main.6c694968.js.map",
     "453.8ab44547.chunk.js.map": "/renovation-company/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ed9950b.css",
-    "static/js/main.485f8291.js"
+    "static/css/main.717b8a35.css",
+    "static/js/main.6c694968.js"
   ]
 }

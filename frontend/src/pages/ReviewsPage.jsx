@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
-import '.src/components/Reviews/ReviewsPage.css';
+import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa'; // Импорт иконки бургера
+import '../components/Reviews/ReviewsPage.css';
+
+import reviewImg1 from '../assets/colorful-flower-garden.jpg';
+import reviewImg2 from '../assets/colorful-flower-garden.jpg';
+import reviewImg3 from '../assets/colorful-flower-garden.jpg';
+import reviewImg4 from '../assets/colorful-flower-garden.jpg';
+import reviewImg5 from '../assets/colorful-flower-garden.jpg';
+import reviewImg6 from '../assets/colorful-flower-garden.jpg';
 
 const reviews = [
-  { id: 1, image: '/assets/colorful-flower-garden.jpg', alt: 'Отзыв 1' },
-  { id: 2, image: '/assets/colorful-flower-garden.jpg', alt: 'Отзыв 2' },
-  { id: 3, image: '/assets/colorful-flower-garden.jpg', alt: 'Отзыв 3' },
-  { id: 4, image: '/assets/colorful-flower-garden.jpg', alt: 'Отзыв 4' },
-  { id: 5, image: '/assets/colorful-flower-garden.jpg', alt: 'Отзыв 5' },
-  { id: 6, image: '/assets/colorful-flower-garden.jpg', alt: 'Отзыв 6' },
+  { id: 1, image: reviewImg1, alt: 'Отзыв 1' },
+  { id: 2, image: reviewImg2, alt: 'Отзыв 2' },
+  { id: 3, image: reviewImg3, alt: 'Отзыв 3' },
+  { id: 4, image: reviewImg4, alt: 'Отзыв 4' },
+  { id: 5, image: reviewImg5, alt: 'Отзыв 5' },
+  { id: 6, image: reviewImg6, alt: 'Отзыв 6' },
 ];
 
 const ReviewsPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const showSlide = (index) => {
     if (index >= reviews.length) {
@@ -25,6 +35,27 @@ const ReviewsPage = () => {
 
   return (
     <section className="reviews-page">
+      {/* Добавленное меню */}
+      <nav className="hero-menu">
+        <Link to="/" className="logo">Repair.cat</Link>
+
+        <div className="menu-links">
+          <Link to="/servicios">Servicios</Link>
+          <Link to="/contacto">Contacto</Link>
+          <Link to="/resenyas">Reseñas</Link>
+        </div>
+
+        <FaBars className="burger-menu" onClick={() => setMenuOpen(!menuOpen)} />
+
+        {menuOpen && (
+          <div className="menu-mobile">
+            <Link to="/servicios" onClick={() => setMenuOpen(false)}>Servicios</Link>
+            <Link to="/contacto" onClick={() => setMenuOpen(false)}>Contacto</Link>
+            <Link to="/resenyas" onClick={() => setMenuOpen(false)}>Reseñas</Link>
+          </div>
+        )}
+      </nav>
+
       <div className="carousel-container">
         <div className="carousel">
           <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>

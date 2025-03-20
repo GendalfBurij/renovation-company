@@ -23,7 +23,7 @@ jobs:
         working-directory: ./frontend  # 👈 Добавляем путь к фронтенду, если package.json внутри frontend
 
       - name: Build project
-        run: npm run build
+        run: REACT_APP_ENV=github npm run build
         working-directory: ./frontend  # 👈 Используем тот же путь
 
       - name: Deploy to GitHub Pages

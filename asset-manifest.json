@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/renovation-company/static/css/main.717b8a35.css",
-    "main.js": "/renovation-company/static/js/main.6c694968.js",
+    "main.css": "/renovation-company/static/css/main.48d55c7b.css",
+    "main.js": "/renovation-company/static/js/main.234cb01f.js",
     "static/js/453.8ab44547.chunk.js": "/renovation-company/static/js/453.8ab44547.chunk.js",
     "static/media/full-shot-men-high-five-office.jpg": "/renovation-company/static/media/full-shot-men-high-five-office.d8d68205443edf843323.jpg",
     "static/media/tiler-working-renovation-apartment.jpg": "/renovation-company/static/media/tiler-working-renovation-apartment.54017ee0e2fd0d138bb6.jpg",
     "static/media/colorful-flower-garden.jpg": "/renovation-company/static/media/colorful-flower-garden.82533c31683042c57620.jpg",
     "static/media/closeup-shot-female-using-paint-rollers-with-color-blue.jpg": "/renovation-company/static/media/closeup-shot-female-using-paint-rollers-with-color-blue.5096cf6482bfb80d79c3.jpg",
     "static/media/high-angle-contractor-painting-house-wall.jpg": "/renovation-company/static/media/high-angle-contractor-painting-house-wall.b22b44633b3614be75d1.jpg",
+    "static/media/instagram_icon.png": "/renovation-company/static/media/instagram_icon.db2612bd586501d9ed3e.png",
     "static/media/icono-3d-campo-construccion.png": "/renovation-company/static/media/icono-3d-campo-construccion.753652a681e423401fad.png",
     "static/media/hombre-negocios-pintura-barra-grafico-rodillo-pintura.png": "/renovation-company/static/media/hombre-negocios-pintura-barra-grafico-rodillo-pintura.4188430974359b0ede0a.png",
+    "static/media/jardinero_icono.png": "/renovation-company/static/media/jardinero_icono.f270aa242e2417fc2b39.png",
+    "static/media/twitter_icon.png": "/renovation-company/static/media/twitter_icon.67ad063d90a28a5bdecc.png",
     "index.html": "/renovation-company/index.html",
-    "main.717b8a35.css.map": "/renovation-company/static/css/main.717b8a35.css.map",
-    "main.6c694968.js.map": "/renovation-company/static/js/main.6c694968.js.map",
+    "main.48d55c7b.css.map": "/renovation-company/static/css/main.48d55c7b.css.map",
+    "main.234cb01f.js.map": "/renovation-company/static/js/main.234cb01f.js.map",
     "453.8ab44547.chunk.js.map": "/renovation-company/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.717b8a35.css",
-    "static/js/main.6c694968.js"
+    "static/css/main.48d55c7b.css",
+    "static/js/main.234cb01f.js"
   ]
 }

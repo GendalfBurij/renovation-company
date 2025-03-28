@@ -4,19 +4,38 @@ import { Link } from 'react-router-dom';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Создаем mailto ссылку
-    const mailtoLink = `mailto:filippmazein@gmail.com?subject=Mensaje de ${formData.name}&body=Email: ${formData.email}%0D%0A%0D%0AMensaje:%0D%0A${formData.message}`;
+    setStatus('sending');
 
-    // Открываем почтовый клиент пользователя
-    window.location.href = mailtoLink;
+    try {
+      const response = await fetch('https://formspree.io/f/mdkedrev', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        }),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Ошибка отправки');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   return (
@@ -54,7 +73,16 @@ const ContactForm = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit">Enviar</button>
+        <button type="submit" disabled={status === 'sending'}>
+          {status === 'sending' ? 'Enviando...' : 'Enviar'}
+        </button>
+        
+        {status === 'success' && (
+          <p className="success-message">¡Mensaje enviado con éxito!</p>
+        )}
+        {status === 'error' && (
+          <p className="error-message">Error al enviar. Inténtalo de nuevo.</p>
+        )}
       </form>
     </section>
   );

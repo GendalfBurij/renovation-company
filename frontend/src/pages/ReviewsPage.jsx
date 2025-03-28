@@ -71,10 +71,10 @@ const ReviewsPage = () => {
           </div>
         </div>
         <div className="text-content">
-          <h1>Отзывы</h1>
+          <h1>Reseñas</h1>
           <p>
-            Мы гордимся тем, что можем помочь нашим клиентам находить ответы на важные вопросы и преодолевать трудные моменты. 
-            Все наши клиенты остались довольны результатами и рады рекомендовать нас своим друзьям.
+            Estamos orgullosos de ayudar a nuestros clientes a encontrar respuestas a preguntas importantes y superar momentos difíciles. 
+            Todos nuestros clientes quedaron satisfechos con los resultados y están felices de recomendarnos a sus amigos.
           </p>
         </div>
       </div>

@@ -14,7 +14,7 @@
   color: #ff9f43;
 }
 
-/* Затемняющий фильтр для фона */
+/* фон */
 .contact-page::before {
   content: "";
   position: absolute;
@@ -22,7 +22,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  
   z-index: 1;
 }
 
@@ -68,4 +67,14 @@
 .contact-form button:hover {
   background: #ff9966;
   transform: translateY(-3px);
+}
+
+.success-message {
+  color: #28a745;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: 10px;
 }

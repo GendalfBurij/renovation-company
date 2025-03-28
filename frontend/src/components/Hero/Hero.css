@@ -135,6 +135,216 @@
     transform: translateY(-3px);
 }
 
+
+/* Секция CTA для отзывов */
+.reviews-cta {
+    background: #fff7ed; /* Один стиль с другими секциями */
+    padding: 3rem 2rem;
+    margin-top: 0;
+}
+  
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+
+.cta-content {
+    flex: 1;
+    text-align: center;
+    color: #ff9f43;
+  }
+  
+  
+
+.cta-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #ff9f43;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  
+}
+
+/* Стили для кнопки */
+.cta-button {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  gap: 20px;
+  padding: 1rem 2rem;
+  background: #ff9f43;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.cta-button:hover {
+  background: #e68a00;
+  transform: translateX(10px);
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.cta-button:hover .arrow-icon {
+    animation: arrowBounce 0.8s infinite;
+}
+
+@keyframes arrowBounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+/* Секция преимуществ */
+.benefits-section {
+    padding: 1rem 2rem;
+    background: #f8f9fa;
+}
+  
+.benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ff9f43;
+}
+
+.benefits-container h2 {
+    text-align: center;
+    color: #ff9f43;
+  }
+  
+  
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Секция "О нас" с изображением справа */
+.about-section {
+    padding: 3rem 2rem;
+    color: #ff9f43;
+    background: #fff7ed; /* Теперь фон выровнен */
+}
+
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-content.reversed {
+    flex-direction: row-reverse;
+}
+
+.about-image {
+    max-width: 450px; /* Уменьшение размера */
+    object-fit: cover;
+    height: 300px; /* Фиксированная высота */
+}
+
+/* Дополнительные кнопки в Hero */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Вторая кнопка — "Pide Presupuesto" */
+.hero-button.secondary {
+    background-color: #fff;
+    color: #ff9f43;
+    border: 2px solid #ff9f43;
+}
+  
+.hero-button.secondary:hover {
+    background-color: #ff9f43;
+    color: #fff;
+}
+
+/* ======= Анимации появления ======= */
+@keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+.fade-in {
+    animation: fadeSlideUp 1.2s ease-out both;
+}
+  
+.fade-in-delayed {
+    animation: fadeSlideUp 1.2s ease-out both;
+}
+  
+  /* ======= Общие цвета и фон ======= */
+body {
+    background-color: #fff7ed;
+    color: #444;
+    font-family: 'Arial', sans-serif;
+}
+  
+.hero-section,
+.about-section,
+.benefits-section,
+.reviews-cta {
+    background-color: #ffffff;
+}
+  
+  /* Заголовки */
+h1, h2, h3 {
+    color: #ff9f43;
+}
+  
+
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+    }
+    
+    .about-image {
+      max-width: 300px;
+      margin-top: 2rem;
+    }
+    
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .hero-menu {
@@ -167,7 +377,7 @@
         top: 60px;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.9);
+        background: #ff9f43;
         text-align: center;
         padding: 10px 0;
         z-index: 1000;
@@ -224,4 +434,110 @@
         padding: 10px 20px; /* Делаем кнопку меньше */
         font-size: 1rem;
     }
+
+    /* ======= CTA мобильная адаптация ======= */
+    .reviews-cta {
+        padding: 2rem 1rem;
+        /* overflow: hidden; */
+    }
+
+      
+    /* === CTA: адаптация изображения === */
+    .cta-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        overflow: hidden;
+    }
+    
+    .cta-content {
+        order: 1;
+        max-width: 90%;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+        opacity: 0.8;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Изображение в CTA */
+    .cta-image {
+        order: 2;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+    }
+    
+    /* Кнопка — внизу */
+    .cta-button {
+        order: 3;
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+        max-width: 80%;
+        justify-content: center;
+    }
+  
+
+    /* ======= Benefits: плоский стиль ======= */
+    .benefit-card {
+        background: transparent;
+        border: 1px solid #ffd4a6;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 1rem;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .benefit-card p {
+        font-size: 0.95rem;
+    }
+    
+    /* Секция "О нас" — мобильная адаптация */
+    .about-section {
+        padding: 2rem 1rem !important; /* Уменьшаем отступы */
+    }
+
+    .about-content.reversed {
+        flex-direction: column; /* Всегда колонка на мобильных */
+        gap: 1rem; /* Уменьшаем расстояние между элементами */
+    }
+
+    .about-image {
+        max-width: 100% !important; /* Ширина по контейнеру */
+        height: 250px !important; /* Фиксированная высота */
+        object-fit: cover; /* Кадрирование изображения */
+        order: 2; /* Изображение после текста */
+        margin-top: 1.5rem;
+    }
+
+    .about-text {
+        order: 1; /* Текст перед изображением */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .services-list {
+        padding-left: 1rem; /* Уменьшаем отступ списка */
+        text-align: left; /* Выравниваем список по левому краю */
+    }
+
+    .services-list li {
+        font-size: 0.95rem; /* Уменьшаем размер текста */
+        margin-bottom: 0.8rem;
+    }
+
+    .cta-button {
+        margin: 1rem auto 0; /* Центрируем кнопку */
+    }
+    
 }

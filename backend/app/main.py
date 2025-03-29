@@ -1,25 +1,28 @@
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr
-from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
+# from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 import os
 from dotenv import load_dotenv
+from fastapi import FastAPI
+from app.routers import chat
 
 load_dotenv()  # Загружаем переменные окружения
 
 app = FastAPI()
+app.include_router(chat.router)
 
 # Настройка почты (Gmail SMTP или любой другой сервис)
-conf = ConnectionConfig(
-    MAIL_USERNAME=os.getenv("MAIL_USERNAME"),
-    MAIL_PASSWORD=os.getenv("MAIL_PASSWORD"),
-    MAIL_FROM=os.getenv("MAIL_FROM"),
-    MAIL_PORT=587,  # Порт SMTP (Gmail)
-    MAIL_SERVER="smtp.gmail.com",
-    MAIL_TLS=True,
-    MAIL_SSL=False,
-    USE_CREDENTIALS=True
-)
+# conf = ConnectionConfig(
+#     MAIL_USERNAME=os.getenv("MAIL_USERNAME"),
+#     MAIL_PASSWORD=os.getenv("MAIL_PASSWORD"),
+#     MAIL_FROM=os.getenv("MAIL_FROM"),
+#     MAIL_PORT=587,  # Порт SMTP (Gmail)
+#     MAIL_SERVER="smtp.gmail.com",
+#     MAIL_TLS=True,
+#     MAIL_SSL=False,
+#     USE_CREDENTIALS=True
+# )
 
 # Модель данных для запроса
 class EmailSchema(BaseModel):
@@ -45,7 +48,8 @@ async def send_email(data: EmailSchema):
 # Разрешаем запросы с фронтенда
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Адрес React-приложения
+    allow_origins=["*"],  # Адрес React-приложения http://localhost:3000
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )

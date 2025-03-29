@@ -1,0 +1,106 @@
+/* components/chat/ChatWidget.css */
+
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+  }
+  
+  .chat-toggle {
+    background-color: #ff9f43;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.8rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+  }
+  
+  .chat-toggle:hover {
+    background-color: #fd8142;
+  }
+  
+  .chat-box {
+    width: 320px;
+    max-height: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .chat-header {
+    background-color: #ff9f43;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .chat-body {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #fff7ed;
+  }
+  
+  .chat-footer {
+    display: flex;
+    border-top: 1px solid #eee;
+    padding: 0.5rem;
+    background-color: #fff;
+  }
+  
+  .chat-footer input {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .chat-footer button {
+    background: #ff9f43;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+  }
+  
+  .chat-footer button:hover {
+    background: #fd8142;
+  }
+  
+  .chat-message {
+    margin-bottom: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    max-width: 80%;
+    line-height: 1.4;
+  }
+  
+  .chat-message.user {
+    background-color: #ffedd5;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+  }
+  
+  .chat-message.bot {
+    background-color: #ffe3c4;
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  

@@ -6,7 +6,7 @@ import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer/Footer';
 import ReviewsPage from './pages/ReviewsPage';
 import './components/ServiceCard/ServiceCard.css';
-
+import ChatWidget from './components/chat/ChatWidget';
 
 const RouterComponent = process.env.REACT_APP_ENV === 'production' ? BrowserRouter : HashRouter;
 
@@ -20,10 +20,8 @@ function App() {
             <Route path="/servicios" element={<ServicesPage />} />
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/resenyas" element={<ReviewsPage />} />
-            {/* <Route path="/politica-privacidad" element={<PrivacyPolicyPage />} />
-            <Route path="/terminos" element={<TermsOfServicePage />} />
-            <Route path="/sobre-nosotros" element={<AboutUsPage />} /> */}
           </Routes>
+          <ChatWidget />
         </div>
         <Footer /> 
       </div>

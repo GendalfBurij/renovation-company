@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/renovation-company/static/css/main.2d2f2428.css",
-    "main.js": "/renovation-company/static/js/main.cc2235ec.js",
-    "static/js/453.8ab44547.chunk.js": "/renovation-company/static/js/453.8ab44547.chunk.js",
-    "static/media/full-shot-men-high-five-office.jpg": "/renovation-company/static/media/full-shot-men-high-five-office.d8d68205443edf843323.jpg",
-    "static/media/tiler-working-renovation-apartment.jpg": "/renovation-company/static/media/tiler-working-renovation-apartment.54017ee0e2fd0d138bb6.jpg",
-    "static/media/colorful-flower-garden.jpg": "/renovation-company/static/media/colorful-flower-garden.82533c31683042c57620.jpg",
-    "static/media/closeup-shot-female-using-paint-rollers-with-color-blue.jpg": "/renovation-company/static/media/closeup-shot-female-using-paint-rollers-with-color-blue.5096cf6482bfb80d79c3.jpg",
-    "static/media/high-angle-contractor-painting-house-wall.jpg": "/renovation-company/static/media/high-angle-contractor-painting-house-wall.b22b44633b3614be75d1.jpg",
-    "static/media/instagram_icon.png": "/renovation-company/static/media/instagram_icon.db2612bd586501d9ed3e.png",
-    "static/media/icono-3d-campo-construccion.png": "/renovation-company/static/media/icono-3d-campo-construccion.753652a681e423401fad.png",
-    "static/media/hombre-negocios-pintura-barra-grafico-rodillo-pintura.png": "/renovation-company/static/media/hombre-negocios-pintura-barra-grafico-rodillo-pintura.4188430974359b0ede0a.png",
-    "static/media/jardinero_icono.png": "/renovation-company/static/media/jardinero_icono.f270aa242e2417fc2b39.png",
-    "static/media/twitter_icon.png": "/renovation-company/static/media/twitter_icon.67ad063d90a28a5bdecc.png",
-    "index.html": "/renovation-company/index.html",
-    "main.2d2f2428.css.map": "/renovation-company/static/css/main.2d2f2428.css.map",
-    "main.cc2235ec.js.map": "/renovation-company/static/js/main.cc2235ec.js.map",
-    "453.8ab44547.chunk.js.map": "/renovation-company/static/js/453.8ab44547.chunk.js.map"
+    "main.css": "/static/css/main.93086964.css",
+    "main.js": "/static/js/main.ef370db5.js",
+    "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
+    "static/media/full-shot-men-high-five-office.jpg": "/static/media/full-shot-men-high-five-office.d8d68205443edf843323.jpg",
+    "static/media/tiler-working-renovation-apartment.jpg": "/static/media/tiler-working-renovation-apartment.54017ee0e2fd0d138bb6.jpg",
+    "static/media/colorful-flower-garden.jpg": "/static/media/colorful-flower-garden.82533c31683042c57620.jpg",
+    "static/media/closeup-shot-female-using-paint-rollers-with-color-blue.jpg": "/static/media/closeup-shot-female-using-paint-rollers-with-color-blue.5096cf6482bfb80d79c3.jpg",
+    "static/media/high-angle-contractor-painting-house-wall.jpg": "/static/media/high-angle-contractor-painting-house-wall.b22b44633b3614be75d1.jpg",
+    "static/media/instagram_icon.png": "/static/media/instagram_icon.db2612bd586501d9ed3e.png",
+    "static/media/icono-3d-campo-construccion.png": "/static/media/icono-3d-campo-construccion.753652a681e423401fad.png",
+    "static/media/hombre-negocios-pintura-barra-grafico-rodillo-pintura.png": "/static/media/hombre-negocios-pintura-barra-grafico-rodillo-pintura.4188430974359b0ede0a.png",
+    "static/media/jardinero_icono.png": "/static/media/jardinero_icono.f270aa242e2417fc2b39.png",
+    "static/media/twitter_icon.png": "/static/media/twitter_icon.67ad063d90a28a5bdecc.png",
+    "index.html": "/index.html",
+    "main.93086964.css.map": "/static/css/main.93086964.css.map",
+    "main.ef370db5.js.map": "/static/js/main.ef370db5.js.map",
+    "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d2f2428.css",
-    "static/js/main.cc2235ec.js"
+    "static/css/main.93086964.css",
+    "static/js/main.ef370db5.js"
   ]
 }

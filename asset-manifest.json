@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/renovation-company/static/css/main.2d2f2428.css",
-    "main.js": "/renovation-company/static/js/main.3055748e.js",
+    "main.js": "/renovation-company/static/js/main.cc2235ec.js",
     "static/js/453.8ab44547.chunk.js": "/renovation-company/static/js/453.8ab44547.chunk.js",
     "static/media/full-shot-men-high-five-office.jpg": "/renovation-company/static/media/full-shot-men-high-five-office.d8d68205443edf843323.jpg",
     "static/media/tiler-working-renovation-apartment.jpg": "/renovation-company/static/media/tiler-working-renovation-apartment.54017ee0e2fd0d138bb6.jpg",
@@ -15,11 +15,11 @@
     "static/media/twitter_icon.png": "/renovation-company/static/media/twitter_icon.67ad063d90a28a5bdecc.png",
     "index.html": "/renovation-company/index.html",
     "main.2d2f2428.css.map": "/renovation-company/static/css/main.2d2f2428.css.map",
-    "main.3055748e.js.map": "/renovation-company/static/js/main.3055748e.js.map",
+    "main.cc2235ec.js.map": "/renovation-company/static/js/main.cc2235ec.js.map",
     "453.8ab44547.chunk.js.map": "/renovation-company/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d2f2428.css",
-    "static/js/main.3055748e.js"
+    "static/js/main.cc2235ec.js"
   ]
 }

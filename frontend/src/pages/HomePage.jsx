@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Hero from '../components/Hero/Hero';  
-
 
 const HomePage = () => {
   useEffect(() => {
@@ -8,7 +7,7 @@ const HomePage = () => {
       .then(response => response.json())
       .then(data => console.log(data.message))
       .catch(error => console.error('Error:', error));
-  }, []);
+  }, []); 
 
   return (
     <>
@@ -20,4 +19,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage; 
+export default HomePage;

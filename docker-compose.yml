@@ -20,7 +20,6 @@ services:
       - ./backend:/app
     environment:
       - DATABASE_URL=postgresql://user:password@db:5432/mydb
-
     env_file:
       - ./backend/.env
     depends_on:

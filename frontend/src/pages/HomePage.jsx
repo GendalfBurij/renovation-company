@@ -3,7 +3,7 @@ import Hero from '../components/Hero/Hero';
 
 
 const HomePage = () => {
-  const [apiMessage, setApiMessage] = useState('');
+  // const [apiMessage, setApiMessage] = useState('');
 
   useEffect(() => {
     fetch('http://localhost:8000/')

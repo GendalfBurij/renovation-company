@@ -2,7 +2,7 @@
 
 .chat-widget {
     position: fixed;
-    bottom: 60px;
+    bottom: 100px;
     right: 20px;
     z-index: 1000;
     font-family: Arial, sans-serif;

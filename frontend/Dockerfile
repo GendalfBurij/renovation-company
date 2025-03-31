@@ -1,19 +1,16 @@
-# Этап сборки
-FROM node:18-alpine AS build
+# Используем официальный Node образ для сборки
+FROM node:18-alpine as build
 
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
-RUN npm install react-router-dom
-COPY public/ ./public/
-COPY src/ ./src/
-ENV REACT_APP_ENV=production
+COPY public/ ./public
+COPY src/ ./src
 RUN npm run build
 
-# Этап запуска
+# Используем Nginx для сервировки приложения
 FROM nginx:alpine
-
 COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 80
-
 CMD ["nginx", "-g", "daemon off;"]
+

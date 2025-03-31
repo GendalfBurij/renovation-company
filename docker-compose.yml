@@ -4,14 +4,8 @@ services:
   frontend:
     build: ./frontend # Использует Dockerfile из папки frontend
     ports:
-      - "3000:3000" # Пробрасывает порт 3000 на хост
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    environment:
-      - NODE_ENV=development
-    stdin_open: true
-
+    - "80:80"
+    
   backend:
     build: ./backend # Использует Dockerfile из папки backend
     ports:

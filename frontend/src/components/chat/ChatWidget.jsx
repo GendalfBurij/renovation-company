@@ -16,7 +16,7 @@ const ChatWidget = () => {
     setLoading(true);
 
     try {
-        const response = await fetch('http://13.60.185.244:8000/chat', {
+        const response = await fetch('http://13.51.200.191:8000/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input })

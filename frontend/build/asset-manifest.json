@@ -1,25 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.93086964.css",
-    "main.js": "/static/js/main.d704fa7e.js",
+    "main.css": "/static/css/main.b284bb70.css",
+    "main.js": "/static/js/main.46e2610c.js",
     "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
-    "static/media/full-shot-men-high-five-office.jpg": "/static/media/full-shot-men-high-five-office.d8d68205443edf843323.jpg",
-    "static/media/tiler-working-renovation-apartment.jpg": "/static/media/tiler-working-renovation-apartment.54017ee0e2fd0d138bb6.jpg",
-    "static/media/colorful-flower-garden.jpg": "/static/media/colorful-flower-garden.82533c31683042c57620.jpg",
-    "static/media/closeup-shot-female-using-paint-rollers-with-color-blue.jpg": "/static/media/closeup-shot-female-using-paint-rollers-with-color-blue.5096cf6482bfb80d79c3.jpg",
-    "static/media/high-angle-contractor-painting-house-wall.jpg": "/static/media/high-angle-contractor-painting-house-wall.b22b44633b3614be75d1.jpg",
+    "static/media/chimenea.png": "/static/media/chimenea.d61f6a05ea2a37c2f76e.png",
+    "static/media/oliva.png": "/static/media/oliva.af84656a8a08d3175ff2.png",
+    "static/media/setos.jpg": "/static/media/setos.c851c2c54e9b8df5d28b.jpg",
+    "static/media/piedra-decorativa.png": "/static/media/piedra-decorativa.f1beb640ae1e00cc6c77.png",
     "static/media/instagram_icon.png": "/static/media/instagram_icon.db2612bd586501d9ed3e.png",
-    "static/media/icono-3d-campo-construccion.png": "/static/media/icono-3d-campo-construccion.753652a681e423401fad.png",
-    "static/media/hombre-negocios-pintura-barra-grafico-rodillo-pintura.png": "/static/media/hombre-negocios-pintura-barra-grafico-rodillo-pintura.4188430974359b0ede0a.png",
-    "static/media/jardinero_icono.png": "/static/media/jardinero_icono.f270aa242e2417fc2b39.png",
+    "static/media/pared-blanca.png": "/static/media/pared-blanca.78a1cec260555beadb30.png",
+    "static/media/jardinero_icono.png": "/static/media/jardinero_icono.ddaaef9f0b718bda9166.png",
+    "static/media/contact-image.png": "/static/media/contact-image.81301f1f5feea619dbcf.png",
+    "static/media/urbanovo-animated.gif": "/static/media/urbanovo-animated.9628ccb4504f1acb140a.gif",
+    "static/media/logo-urbanovo.png": "/static/media/logo-urbanovo.f3570d6c1404205623da.png",
+    "static/media/un-solo-equipo.png": "/static/media/un-solo-equipo.c7d2179825ebfaaa7ca6.png",
+    "static/media/Comunicación-clara-y-directa.png": "/static/media/Comunicación-clara-y-directa.90dbd723f13ece1b3be3.png",
+    "static/media/estética-con-criterio.png": "/static/media/estética-con-criterio.9f26f04c39029885d2be.png",
+    "static/media/espacios-reales.png": "/static/media/espacios-reales.669922501f7c2b2fbff4.png",
+    "static/media/soluciones-pensadas.png": "/static/media/soluciones-pensadas.06a2c1d2a5f46ca375fb.png",
+    "static/media/Detalles-que-otros-ignoran.png": "/static/media/Detalles-que-otros-ignoran.fe079d4209f66cbbbe65.png",
     "static/media/twitter_icon.png": "/static/media/twitter_icon.67ad063d90a28a5bdecc.png",
     "index.html": "/index.html",
-    "main.93086964.css.map": "/static/css/main.93086964.css.map",
-    "main.d704fa7e.js.map": "/static/js/main.d704fa7e.js.map",
+    "main.b284bb70.css.map": "/static/css/main.b284bb70.css.map",
+    "main.46e2610c.js.map": "/static/js/main.46e2610c.js.map",
     "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93086964.css",
-    "static/js/main.d704fa7e.js"
+    "static/css/main.b284bb70.css",
+    "static/js/main.46e2610c.js"
   ]
 }

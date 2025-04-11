@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import './ContactForm.css';
+import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import logoImg from '../../assets/logo-urbanovo.png';
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
-
+  const [menuOpen, setMenuOpen] = useState(false);
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -41,12 +44,22 @@ const ContactForm = () => {
   return (
     <section className="contact-section">
       <nav className="hero-menu">
-        <Link to="/" className="logo">Repair.cat</Link>
+        <Link to="/" className="logo">
+          <img src={logoImg} alt="Urbanovo" className="logo-img" />
+        </Link>
         <div className="menu-links">
           <Link to="/servicios">Servicios</Link>
           <Link to="/contacto">Contacto</Link>
           <Link to="/resenyas">Reseñas</Link>
         </div>
+        <FaBars className="burger-menu" onClick={() => setMenuOpen(!menuOpen)} />
+        {menuOpen && (
+          <div className="menu-mobile">
+            <Link to="/servicios" onClick={() => setMenuOpen(false)}>Servicios</Link>
+            <Link to="/contacto" onClick={() => setMenuOpen(false)}>Contacto</Link>
+            <Link to="/resenyas" onClick={() => setMenuOpen(false)}>Reseñas</Link>
+          </div>
+        )}
       </nav>
       <h2>¡Haznos una pregunta!</h2>
       <form className="contact-form" onSubmit={handleSubmit}>

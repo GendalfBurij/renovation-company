@@ -2,8 +2,8 @@
 
 .chat-widget {
     position: fixed;
-    bottom: 100px;
-    right: 20px;
+    bottom: 70px;
+    right: 15px;
     z-index: 1000;
     font-family: Arial, sans-serif;
   }
@@ -27,6 +27,7 @@
   .chat-box {
     width: 320px;
     max-height: 500px;
+    min-height: 150px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);

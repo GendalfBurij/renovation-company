@@ -171,8 +171,17 @@
     .footer-content {
       grid-template-columns: 1fr;
       text-align: center;
+      gap: 1rem;
     }
-  
+
+    .footer-section {
+      margin-bottom: 0.5rem; 
+    }
+    
+    .brand-description {
+      margin-bottom: 0.8rem;
+    }
+
     .footer-nav,
     .legal-links {
       flex-direction: column;

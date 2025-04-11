@@ -1,27 +1,15 @@
-.hero-section {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    color: rgb(252, 196, 121);
-    position: relative;
-    padding: 50px;
+/* ============================= */
+/* ===== РАЗДЕЛ МЕНЮ ======== */
+/* ============================= */
+
+/* Основное меню */
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
-/* Контейнер для изображения и контента */
-.hero-container {
-    display: flex;
-    flex-direction: row; /* Располагаем элементы в строку */
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-    gap: 50px;
-}
-
-/* Меню */
 .hero-menu {
     position: absolute;
     top: 40px;
@@ -31,92 +19,132 @@
     justify-content: space-between;
     width: 80%;
     align-items: center;
-    background: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(10px);
-    padding: 15px 30px;
-    border-radius: 12px;
-}
-
-/* Бургер-меню (изначально скрыто) */
-.burger-menu {
-    display: none; /* Показывать только на мобильных */
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-}
-
-/* Меню-бургер (по умолчанию скрыто) */
-.menu-mobile {
-    display: none;
-    
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: rgb(255, 98, 0);
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-
-.menu-links {
+    box-shadow: none;
+    padding: 15px 5px;
+    background: white;
+    /* border-radius: 12px; */
+    z-index: 10;
+  }
+  
+  /* Логотип */
+  .logo {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  /* Разделы меню */
+  .menu-links {
     display: flex;
     gap: 50px;
-}
-
-.menu-links a {
+  }
+  
+  .menu-links a {
     color: rgb(255, 98, 0);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
     transition: 0.3s;
-}
-
-.menu-links a:hover {
+  }
+  
+  .menu-links a:hover {
     opacity: 0.7;
-}
-
-/* Контейнер с заголовком и текстом */
-.hero-content {
-    flex: 1; /* Занимает 50% */
+  }
+  
+  /* Бургер-меню */
+  .burger-menu {
+    display: none;
+    font-size: 2rem;
+    color: rgb(255, 98, 0);
+    cursor: pointer;
+    fill: #ff6200;
+  }
+  
+  .menu-mobile {
+    display: none;
+  }
+  
+  /* ============================= */
+  /* ===== HERO SECTION ======== */
+  /* ============================= */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-top: 140px; 
+  }
+  .hero-section {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: rgb(253, 157, 30);
+    position: relative;
+    padding: 50px;
+    background: linear-gradient(white, white);
+  }
+  
+  .hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Выравниваем текст слева */
-    text-align: left;
+    align-items: flex-start;
+    text-align: center;
     padding-right: 80px;
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
+    z-index: 2;
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem); 
     font-weight: bold;
     margin-bottom: 1rem;
     letter-spacing: 2px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
+    margin: 20px 0;
+    line-height: 1.3;
+    color: #155724;
+  }
+  
+  .hero-content p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
     font-weight: 250;
     margin-bottom: 20px;
-    max-width: 600px;
-}
-
-/* Стили для изображения */
-.hero-image {
-    width: 400px; /* Увеличиваем изображение */
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Блок с изображением */
-.hero-image-container {
-    flex: 1; /* Занимает 50% */
+    /* max-width: 600px; */
+    max-width: 90%;
+    margin: 0 auto;
+    color: #ff9f43;
+  }
+  
+  .hero-buttons {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Кнопка "Nuestros Servicios" */
-.hero-button {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .hero-button {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 24px;
@@ -128,23 +156,196 @@
     border-radius: 30px;
     text-decoration: none;
     transition: all 0.3s ease;
-}
-
-.hero-button:hover {
+  }
+  
+  .hero-button:hover {
     background-color: #fd8142;
     transform: translateY(-3px);
-}
+  }
+  
+  .hero-button.secondary {
+    background-color: #fff;
+    color: #ff9f43;
+    border: 2px solid #ff9f43;
+  }
+  
+  .hero-button.secondary:hover {
+    background-color: #ff9f43;
+    color: #fff;
+  }
+  
+  .hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image {
+    max-height: min(60vh, 600px); 
+    /* width: 400px; */
+    width: auto;
+    object-fit: contain;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  /* ============================= */
+  /* ===== ПРЕИМУЩЕСТВА ======== */
+  /* ============================= */
+  
+  .benefits-section {
+    padding: 1rem 2rem;
+    background: #f8f9fa;
+  }
+  
+  .benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ff9f43;
+  }
+  
+  .benefits-container h2 {
+    text-align: center;
+    color: #155724;
+  }
+  
+  .benefit-icon {
+    font-size: 2.5rem;
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
 
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .benefit-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 1.5rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .benefit-text h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    color: #155724;
+  }
 
-/* Секция CTA для отзывов */
-.reviews-cta {
-    background: #fff7ed; /* Один стиль с другими секциями */
+  .benefit-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* ============================= */
+  /* ========== CTA ============ */
+  /* ============================= */
+  
+  .about-section {
+    padding: 4rem 2rem;
+    background: #ffffff;
+  }
+
+  .about-section h2 {
+    color: #155724;
+  }
+
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about-content.reversed {
+    flex-direction: row-reverse;
+  }
+
+  .about-text {
+    flex: 1;
+    min-width: 50%;
+    padding-right: 40px;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    /* color: #002509;  */
+    /* color: #ff9f43; */
+    color: #155724;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-image {
+    flex: 1;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 auto;
+    padding: 0 20px; 
+    object-fit: contain;
+  }
+
+  .services-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+  }
+
+  .services-list li {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    padding-left: 40px;
+    position: relative;
+    color: #ff9f43;
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+  
+  .services-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+  }
+
+  .reviews-cta {
+    background: #fff7ed;
     padding: 3rem 2rem;
     margin-top: 0;
-}
-  
+  }
 
-.cta-container {
+  .reviews-cta h2 {
+    color: #155724;
+  }
+  
+  .cta-container {
     max-width: 800px;
     margin: 0 auto;
     display: flex;
@@ -154,390 +355,346 @@
     text-align: center;
   }
   
-
-.cta-content {
+  .cta-content {
     flex: 1;
     text-align: center;
     color: #ff9f43;
   }
   
-  
-
-.cta-content h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #ff9f43;
-}
-
-.cta-content p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  
-}
-
-/* Стили для кнопки */
-.cta-button {
-  display: flex;
-  align-items: center;
-  max-width: 200px;
-  gap: 20px;
-  padding: 1rem 2rem;
-  background: #ff9f43;
-  color: white;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s;
-  font-weight: 500;
-}
-
-.cta-button:hover {
-  background: #e68a00;
-  transform: translateX(10px);
-}
-
-.arrow-icon {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
-}
-
-.cta-button:hover .arrow-icon {
-    animation: arrowBounce 0.8s infinite;
-}
-
-@keyframes arrowBounce {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(5px); }
-}
-
-/* Секция преимуществ */
-.benefits-section {
-    padding: 1rem 2rem;
-    background: #f8f9fa;
-}
-  
-.benefits-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #ff9f43;
-}
-
-.benefits-container h2 {
-    text-align: center;
-    color: #ff9f43;
+  .cta-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #155724;
   }
   
+  .cta-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
   
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
-.benefit-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.benefit-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Секция "О нас" с изображением справа */
-.about-section {
-    padding: 3rem 2rem;
-    color: #ff9f43;
-    background: #fff7ed; /* Теперь фон выровнен */
-}
-
-
-.about-content {
-    display: flex;
+  .cta-button {
+    display: inline-flex;
     align-items: center;
-    gap: 3rem;
-}
-
-.about-content.reversed {
-    flex-direction: row-reverse;
-}
-
-.about-image {
-    max-width: 450px; /* Уменьшение размера */
-    object-fit: cover;
-    height: 300px; /* Фиксированная высота */
-}
-
-/* Дополнительные кнопки в Hero */
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* Вторая кнопка — "Pide Presupuesto" */
-.hero-button.secondary {
-    background-color: #fff;
-    color: #ff9f43;
-    border: 2px solid #ff9f43;
-}
+    margin: 1rem auto 0; /* Отступы */
+    gap: 20px;
+    padding: 14px 40px;
+    background: #ff9f43;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    max-width: none; 
+    width: fit-content;
+    justify-content: center;
+  }
   
-.hero-button.secondary:hover {
-    background-color: #ff9f43;
-    color: #fff;
-}
-
-/* ======= Анимации появления ======= */
-@keyframes fadeSlideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-}
+  .cta-button:hover {
+    background: #e68a00;
+    transform: translateX(10px);
+  }
   
-.fade-in {
-    animation: fadeSlideUp 1.2s ease-out both;
-}
+  .arrow-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
   
-.fade-in-delayed {
-    animation: fadeSlideUp 1.2s ease-out both;
-}
+  .cta-button:hover .arrow-icon {
+    animation: arrowBounce 0.8s infinite;
+  }
   
-  /* ======= Общие цвета и фон ======= */
-body {
+  @keyframes arrowBounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+  }
+  
+  /* ============================= */
+  /* ===== ОБЩЕЕ / БАЗОВОЕ ===== */
+  /* ============================= */
+  
+  body {
     background-color: #fff7ed;
     color: #444;
     font-family: 'Arial', sans-serif;
-}
+  }
   
-.hero-section,
-.about-section,
-.benefits-section,
-.reviews-cta {
+  .hero-section,
+  .about-section,
+  .benefits-section,
+  .reviews-cta {
     background-color: #ffffff;
-}
+  }
   
-  /* Заголовки */
-h1, h2, h3 {
-    color: #ff9f43;
-}
+  h1, h2, h3 {
+    color: #155724;
+  }
   
-
-  /* Адаптивность */
+  /* ============================= */
+  /* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
+  /* ============================= */
+  
   @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+    
+    .hero {
+        /* padding-top: 800px; */
+        /* new */
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 20px;
+        top: 0;
+        text-align: center;
+        background-color: white;
+    }
+    
+    .hero-menu {
+      width: 100%;
+      left: 0;
+      top: 0;
+      transform: none;
+      justify-content: space-between;
+      color: rgb(255, 98, 0);
+      flex-direction: row;
+      padding: 10px 20px;
+      background-color: white;
+      align-items: center;
+    }
+  
+    .logo {
+      margin-left: 0;
+    }
+    
+    .logo-img {
+        height: 50px; 
+    }
+
+    .menu-links {
+      display: none;
+    }
+  
+    .burger-menu {
+      display: block;
+      order: 1;
+      margin-right: 15px;
+      color: rgb(255, 98, 0);
+      background-color: transparent;
+    }
+
+    .burger-menu svg {
+        fill: #ff6200 !important;
+    }
+  
+    .menu-mobile {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background: #ff9f43;
+      color: rgb(255, 98, 0);
+      text-align: center;
+      padding: 10px 0;
+      z-index: 1000;
+      top: 80px !important;
+    }
+  
+    .menu-mobile a {
+      color: rgb(253, 253, 253);
+      text-decoration: none;
+      font-size: 1.5rem;
+      padding: 10px;
+      display: block;
+    }
+  
+    .menu-mobile a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .hero-section {
+        padding-bottom: 50px; 
+    }
+
+    .hero-title {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .hero-container {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .hero-image-container {
+      width: 100%;
+      padding: 0 20px;
+      order: -1;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      align-items: center;
+    }
+    
+    .hero-title-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 12px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .hero-image {
+      max-height: 50vh;
+      object-fit: contain; 
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+  
+    .hero-content {
+      padding-right: 0;  
+      padding: 0 20px;
+      align-items: center;
+      text-align: center;
+      /* new */
+      font-size: 14px;
+    }
+  
+    .hero-content h1 {
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+  
+    .hero-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 100%;
+    }
+  
+    .hero-button {
+      width: 100%;
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: column; 
+      width: 100%;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+    }
+  
+    .benefit-card {
+      min-width: 280px;
+      margin: 0 10px;
+    }
+    
+    .benefit-icon {
+        width: 50px; 
+        height: 50px;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .benefit-card p {
+      font-size: 0.95rem;
+    }
+
+    .benefit-text h3 {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+      
+    .benefit-text p {
+      /* font-size: clamp(0.8rem, 1.2vw, 1rem); */
+      font-size: 1.05rem;
+    }
+
     .about-content {
       flex-direction: column;
     }
     
-    .about-image {
-      max-width: 300px;
-      margin-top: 2rem;
-    }
-    
-    .benefits-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .hero-menu {
-        width: 100%;
-        left: 0;
-        transform: none;
-        padding: 15px;
-        justify-content: space-between; /* Выравниваем логотип и бургер-меню */
-        color: rgb(255, 98, 0);
-    }
-
-    .logo {
-        margin-left: 15px; /* Добавляем отступ, чтобы логотип не сливался с краем */
-    }
-
-    .menu-links {
-        display: none; /* Скрываем обычное меню */
-    }
-
-    .burger-menu {
-        display: block; /* Показываем бургер-меню */
-        margin-right: 15px; /* Двигаем бургер вправо */
-        color: rgb(255, 98, 0);
-    }
-
-    .menu-mobile {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #ff9f43;
-        text-align: center;
-        padding: 10px 0;
-        z-index: 1000;
-    }
-
-    .menu-mobile a {
-        color: rgb(253, 253, 253);
-        text-decoration: none;
-        font-size: 1.5rem;
-        padding: 10px;
-        display: block;
-    }
-
-    .menu-mobile a:hover {
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    .hero-container {
-        flex-direction: column; /* Контент и изображение друг под другом */
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        gap: 20px; /* Уменьшаем отступы */
-    }
-
-    .hero-image-container {
-        order: -1; /* Двигаем изображение выше текста */
-        display: flex;
-        justify-content: center;
-    }
-
-    .hero-image {
-        width: 220px; /* Делаем изображение меньше */
-        margin-top: 40px; /* Уменьшаем отступ сверху */
-    }
-
-    .hero-content {
-        padding: 0 20px; /* Добавляем отступы по бокам */
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem; /* Уменьшаем заголовок */
-        line-height: 1.2;
-    }
-
-    .hero-content p {
-        font-size: 1rem; /* Уменьшаем текст */
-        max-width: 100%;
-    }
-
-    .hero-button {
-        padding: 10px 20px; /* Делаем кнопку меньше */
-        font-size: 1rem;
-    }
-
-    /* ======= CTA мобильная адаптация ======= */
-    .reviews-cta {
-        padding: 2rem 1rem;
-        /* overflow: hidden; */
-    }
-
-      
-    /* === CTA: адаптация изображения === */
-    .cta-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1.5rem;
-        padding: 1rem;
-        overflow: hidden;
-    }
-    
-    .cta-content {
-        order: 1;
-        max-width: 90%;
-    }
-    
-    .cta-content h2 {
-        font-size: 1.6rem;
-    }
-    
-    .cta-content p {
-        font-size: 1rem;
-        opacity: 0.8;
-        margin-bottom: 1.5rem;
-    }
-    
-    /* Изображение в CTA */
-    .cta-image {
-        order: 2;
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        border-radius: 10px;
-    }
-    
-    /* Кнопка — внизу */
-    .cta-button {
-        order: 3;
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
-        max-width: 80%;
-        justify-content: center;
-    }
-  
-
-    /* ======= Benefits: плоский стиль ======= */
-    .benefit-card {
-        background: transparent;
-        border: 1px solid #ffd4a6;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 1rem;
-    }
-
-    .benefit-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .benefit-card p {
-        font-size: 0.95rem;
-    }
-    
-    /* Секция "О нас" — мобильная адаптация */
-    .about-section {
-        padding: 2rem 1rem !important; /* Уменьшаем отступы */
-    }
-
     .about-content.reversed {
-        flex-direction: column; /* Всегда колонка на мобильных */
-        gap: 1rem; /* Уменьшаем расстояние между элементами */
-    }
-
-    .about-image {
-        max-width: 100% !important; /* Ширина по контейнеру */
-        height: 250px !important; /* Фиксированная высота */
-        object-fit: cover; /* Кадрирование изображения */
-        order: 2; /* Изображение после текста */
-        margin-top: 1.5rem;
+      flex-direction: column;
     }
 
     .about-text {
-        order: 1; /* Текст перед изображением */
-        text-align: center; /* Центрируем текст */
+      width: 100%;
+      padding-right: 0;
+      order: 2;
     }
 
-    .services-list {
-        padding-left: 1rem; /* Уменьшаем отступ списка */
-        text-align: left; /* Выравниваем список по левому краю */
+    .about-image {
+      max-width: 350px;
+      order: 1;
+      margin: 0 auto 2rem;
+      max-height: 280px; 
+      max-width: 80%;
+      width: auto; 
+      object-fit: cover; 
+      padding: 0 10px;
     }
-
+    
     .services-list li {
-        font-size: 0.95rem; /* Уменьшаем размер текста */
-        margin-bottom: 0.8rem;
+      /* font-size: 1rem; */
+      padding-left: 30px;
+      font-size: 1.05rem;
     }
 
     .cta-button {
-        margin: 1rem auto 0; /* Центрируем кнопку */
+      max-width: 300px;
+      justify-content: center;
+      padding: 12px 25px;
+      font-size: 0.95rem;
+      width: 100%; 
+      margin: 0 auto;
     }
-    
-}
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p, li, .hero-content p, .benefit-card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  
+    .benefit-card h3 {
+      font-size: 1.3rem;
+    }
+  
+    .hero-button {
+      font-size: 1.1rem;
+    }
+
+  }
+  

@@ -5,7 +5,7 @@ import Hero from '../components/Hero/Hero';
 
 const HomePage = () => {
   useEffect(() => {
-    fetch('http://13.51.200.191:8000/')
+    fetch("/api/...")
       .then(response => response.json())
       .then(data => console.log(data.message))
       .catch(error => console.error('Error:', error));

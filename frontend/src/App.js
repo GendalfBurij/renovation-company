@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer/Footer';
-import ReviewsPage from './pages/ReviewsPage';
+import ReviewsPage from './pages/ReviewsPage';//проблема
 import './components/ServiceCard/ServiceCard.css';
 import ChatWidget from './components/chat/ChatWidget';
 

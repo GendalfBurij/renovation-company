@@ -4,7 +4,11 @@ import ContactForm from '../components/ContactForm/ContactForm';
 const ContactPage = () => {
   return (
     <section className="contact-page">
-      <ContactForm />
+      <div className="contact-wrapper">
+        <div className="contact-image-desktop"></div>
+        <div className="contact-image-mobile"></div>
+        <ContactForm />
+      </div>
     </section>
   );
 };

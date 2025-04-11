@@ -1,40 +1,54 @@
-from fastapi import FastAPI, HTTPException, Depends
+import os
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr
-# from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
-import os
+from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 from dotenv import load_dotenv
-from fastapi import FastAPI
-from app.routers import chat
 
-load_dotenv()  # Загружаем переменные окружения
+load_dotenv()
 
 app = FastAPI()
-app.include_router(chat.router)
 
-# Настройка почты (Gmail SMTP или любой другой сервис)
-# conf = ConnectionConfig(
-#     MAIL_USERNAME=os.getenv("MAIL_USERNAME"),
-#     MAIL_PASSWORD=os.getenv("MAIL_PASSWORD"),
-#     MAIL_FROM=os.getenv("MAIL_FROM"),
-#     MAIL_PORT=587,  # Порт SMTP (Gmail)
-#     MAIL_SERVER="smtp.gmail.com",
-#     MAIL_TLS=True,
-#     MAIL_SSL=False,
-#     USE_CREDENTIALS=True
-# )
+# CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://urbanovo.xyz"],  
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-# Модель данных для запроса
+# ====== Email settings (FastMail) ======
+conf = ConnectionConfig(
+    MAIL_USERNAME=os.getenv("MAIL_USERNAME"),
+    MAIL_PASSWORD=os.getenv("MAIL_PASSWORD"),
+    MAIL_FROM=os.getenv("MAIL_FROM"),
+    MAIL_PORT=int(os.getenv("MAIL_PORT", 587)),
+    MAIL_SERVER=os.getenv("MAIL_SERVER"),
+    MAIL_TLS=True,
+    MAIL_SSL=False,
+    USE_CREDENTIALS=True
+)
+
+# ====== Chat endpoint ======
+class ChatRequest(BaseModel):
+    message: str
+
+@app.post("/api/chat")
+async def chat(chat: ChatRequest):
+    return {"response": f"Echo: {chat.message}"}
+
+# ====== Email endpoint ======
 class EmailSchema(BaseModel):
     name: str
     email: EmailStr
     message: str
 
-@app.post("/send-email/")
+@app.post("/api/send-email/")
 async def send_email(data: EmailSchema):
     message = MessageSchema(
         subject=f"Сообщение от {data.name}",
-        recipients=[os.getenv("MAIL_TO")],  # Получатель (из .env)
+        recipients=[os.getenv("MAIL_TO")],
         body=f"От {data.name} ({data.email}):\n\n{data.message}",
         subtype="plain"
     )
@@ -45,15 +59,7 @@ async def send_email(data: EmailSchema):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Ошибка при отправке: {str(e)}")
 
-# Разрешаем запросы с фронтенда
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Адрес React-приложения http://localhost:3000
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
+# ====== Health check ======
 @app.get("/")
-def read_root():
-    return {"message": "Renovation Company API is working!"}
+async def read_root():
+    return {"message": "Backend is running!"}

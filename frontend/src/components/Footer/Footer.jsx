@@ -4,6 +4,7 @@ import './Footer.css';
 import YouTubeIcon from '../../assets/youtube_icon.png';
 import InstagramIcon from '../../assets/instagram_icon.png';
 import WhatsAppIcon from '../../assets/twitter_icon.png';
+import logoImg from '../../assets/logo-urbanovo.png';
 
 const Footer = () => {
   return (
@@ -11,8 +12,10 @@ const Footer = () => {
       <div className="footer-content">
         {/* Блок бренда и соцсетей */}
         <div className="footer-brand">
-          <Link to="/" className="logo">Repair.cat</Link>
-          <p className="brand-description">Reparación rápida en Barcelona desde 2022.</p>
+          <Link to="/" className="logo">
+            <img src={logoImg} alt="Urbanovo" className="logo-img" />
+          </Link>
+          <p className="brand-description">Reparación rápida en Tarragona y cercanias desde 2022.</p>
           <div className="social-media">
             <a href="https://youtube.com/repair.cat" target="_blank" rel="noopener noreferrer">
                 <img src={YouTubeIcon} alt="YouTube" />
@@ -40,9 +43,9 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Contacto</h4>
           <div className="contact-info">
-            <p>📞 +34 123 456 789</p>
-            <p>✉️ info@repair.cat</p>
-            <p>📍 Carrer de ...</p>
+            <p>📞 +34 628 053 853</p>
+            <p>✉️ urbanovo.contact@gmail.com</p>
+            <p>📍 Cambrils</p>
           </div>
         </div>
 

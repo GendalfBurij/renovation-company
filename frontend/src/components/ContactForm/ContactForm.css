@@ -1,64 +1,87 @@
-/* Фон страницы контактов */
+/* ============================= */
+/* ===== КОНТАКТНАЯ СТРАНИЦА === */
+/* ============================= */
+
 .contact-page {
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding-top: 100px; /* отступ под меню */
+}
+
+/* ============================= */
+/* ===== ОБОЛОЧКА КОНТЕНТА ===== */
+/* ============================= */
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  padding: 60px 40px; /* отступ сверху и снизу формы */
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+/* ============================= */
+/* ===== ИЗОБРАЖЕНИЕ СЛЕВА ===== */
+/* ============================= */
+
+.contact-image-desktop {
+  flex: 1;
+  background: url('../../assets/contact-image.png') no-repeat center top;
+  background-size: contain;
+  height: 80vh;
+  max-width: 50%;
+}
+
+/* ============================= */
+/* ===== КОНТАКТНАЯ ФОРМА ===== */
+/* ============================= */
+
+.contact-section {
+  flex: 1;
+  max-width: 600px;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-right: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: url('../../assets/hombre-negocios-pintura-barra-grafico-rodillo-pintura.png') no-repeat center center;
-  background-size: contain; /* Весь рисунок будет виден */
-  background-color: #f8f9fa; /* Цвет фона на случай, если картинка не покрывает весь экран */
-  background-position: 85% center;
-  position: relative;
-  text-align: center;
-  color: #ff9f43;
 }
 
-/* фон */
-.contact-page::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #155724;
 }
 
-/* Контент остается поверх затемнения */
-.contact-section {
-  position: relative;
-  z-index: 2;
-}
-
-/* Стили формы */
 .contact-form {
-  max-width: 600px;
-  width: 90%;
-  background: rgba(252, 234, 206, 0.9);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-/* Кнопка */
 .contact-form button {
   width: 100%;
   padding: 12px;
   background: #ff9f43;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -77,4 +100,45 @@
 .error-message {
   color: #dc3545;
   margin-top: 10px;
+}
+
+.logo-img {
+  height: 80px;
+}
+
+
+/* ============================= */
+/* ========== МОБИЛКА ========== */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .contact-image-desktop {
+    display: none;
+  }
+
+  .contact-image-mobile {
+    display: block;
+    width: 100%;
+    height: 260px;
+    background: url('../../assets/contact-image.png') no-repeat center center;
+    background-size: contain;
+    margin: 40px 0 20px 0;
+  }
+
+  .contact-section {
+    width: 100%;
+    padding: 1.5rem 1.25rem;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
 }

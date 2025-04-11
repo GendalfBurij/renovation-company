@@ -1,34 +1,19 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import ServiceCard from '../components/ServiceCard/ServiceCard';
-import repairIcon1 from '../assets/tiler-working-renovation-apartment.jpg';
-import repairIcon2 from '../assets/colorful-flower-garden.jpg';
-import repairIcon3 from '../assets/closeup-shot-female-using-paint-rollers-with-color-blue.jpg';
-import repairIcon4 from '../assets/high-angle-contractor-painting-house-wall.jpg';
-import repairIcon5 from '../assets/full-shot-men-high-five-office.jpg';
 import '../components/ServiceCard/ServiceCard.css';
+import logoImg from '../assets/logo-urbanovo.png';
 
 const ServicesPage = () => {
-  const serviceListRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  const scrollStep = 350; // Оптимальный шаг прокрутки
-
-  const handlePrev = () => serviceListRef.current?.scrollBy({ 
-    left: -scrollStep, 
-    behavior: 'smooth' 
-  });
-
-  const handleNext = () => serviceListRef.current?.scrollBy({ 
-    left: scrollStep, 
-    behavior: 'smooth' 
-  });
 
   return (
     <section className="services-page">
       <nav className="hero-menu">
-        <Link to="/" className="logo">Repair.cat</Link>
+        <Link to="/" className="logo">
+          <img src={logoImg} alt="Urbanovo" className="logo-img" />
+        </Link>
+
         <div className="menu-links">
           <Link to="/servicios">Servicios</Link>
           <Link to="/contacto">Contacto</Link>
@@ -37,9 +22,7 @@ const ServicesPage = () => {
         <FaBars 
           className="burger-menu" 
           onClick={() => setMenuOpen(!menuOpen)}
-          color="#ff7300" 
         />
-
         {menuOpen && (
           <div className="menu-mobile">
             <Link to="/servicios" onClick={() => setMenuOpen(false)}>Servicios</Link>
@@ -49,49 +32,69 @@ const ServicesPage = () => {
         )}
       </nav>
 
-      <div className="content-wrapper">
-        <h2 className="services-title">Nuestros Servicios</h2>
-        
-        <div className="carousel-controls">
-          <button onClick={handlePrev} aria-label="Previous">
-            <FaChevronLeft className="control-icon" />
-          </button>
-          <button onClick={handleNext} aria-label="Next">
-            <FaChevronRight className="control-icon" />
-          </button>
+      <div className="services-content">
+        <h2 className="services-title">Servicios de pintura, jardinería y reformas en Tarragona y alrededores</h2>
+        <p className="services-description">
+          Urbanovo ofrece soluciones completas en pintura de fachadas y muros, jardinería, reformas y aplicación de yeso en Tarragona, Reus, Cambrils, Salou y alrededores. <br />
+          Nuestro equipo de pintores, jardineros y especialistas en reformas trabaja con precisión, detalle y compromiso. Ya sea pintar edificios, podar olivos o transformar un patio, lo hacemos con excelencia.
+        </p>
+
+        {/* Блок видео YouTube */}
+        <div className="video-block">
+          <div className="video-wrapper">
+            <iframe
+              src="https://youtu.be/rFEqIkSkI34?si=9j812jzFZXW0YQsu"
+              title="Urbanovo video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
 
-        <div className="service-list" ref={serviceListRef}>
-        <ServiceCard 
-          title="Reformas Integrales" 
-          description="Renovamos tu hogar con calidad y atención al detalle. Servicio llave en mano." 
-          icon={repairIcon1} 
-        />
+        {/* Список категорий и услуг */}
+        <div className="services-grid">
+          <div className="service-category">
+            <h3>🛠️ Reformas y acabados exteriores</h3>
+            <ul>
+              <li>Pintura de muros y fachadas</li>
+              <li>Aplicación de yeso y acabados finos</li>
+              <li>Colocación de piedra decorativa</li>
+              <li>Pulido y pintura de estructuras metálicas</li>
+              <li>Reparaciones menores en exteriores</li>
+              <li>Limpieza y mantenimiento de superficies</li>
+            </ul>
+          </div>
 
-        <ServiceCard 
-          title="Diseño de Paisajismo" 
-          description="Creamos espacios exteriores armoniosos y sostenibles con un diseño innovador." 
-          icon={repairIcon2} 
-        />
+          <div className="service-category">
+            <h3>⚡ Instalaciones funcionales</h3>
+            <ul>
+              <li>Instalación y extensión de enchufes</li>
+              <li>Instalación de sistemas de riego automático</li>
+              <li>Adecuación de espacios comunes y públicos</li>
+              <li>Trabajos personalizados según necesidad</li>
+            </ul>
+          </div>
 
-        <ServiceCard 
-          title="Acabados y Decoración" 
-          description="Aplicamos materiales de vanguardia para transformar interiores con estilo y funcionalidad." 
-          icon={repairIcon3} 
-        />
+          <div className="service-category">
+            <h3>🌿 Paisajismo y mantenimiento verde</h3>
+            <ul>
+              <li>Poda de setos, olivos y arbustos</li>
+              <li>Corte y mantenimiento de césped</li>
+              <li>Retiro de hojas y mantenimiento estacional</li>
+              <li>Limpieza general de jardines</li>
+            </ul>
+          </div>
 
-        <ServiceCard 
-          title="Pintura Profesional" 
-          description="Usamos técnicas modernas y materiales de calidad para un acabado perfecto y duradero." 
-          icon={repairIcon4} 
-        />
-
-        <ServiceCard 
-          title="Mantenimiento de Espacios" 
-          description="Cuidamos áreas públicas y privadas para mantener su belleza y funcionalidad." 
-          icon={repairIcon5} 
-        />
-
+          <div className="service-category">
+            <h3>🎨 Rehabilitación estética y funcional</h3>
+            <ul>
+              <li>Intervenciones integrales para fachadas</li>
+              <li>Mejora visual de zonas comunitarias</li>
+              <li>Proyectos combinados: pintura, jardinería</li>
+              <li>Transformación de espacios sin obras</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
